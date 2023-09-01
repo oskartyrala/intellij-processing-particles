@@ -67,7 +67,7 @@ public class Spark {
         float y = p5.random(0f, p5.height);
         float size = p5.random(10, 50);
 ;
-        int colour = Utils.pickFromArray(p5, palette);
+        int colour = Utils.pickFromArray(palette);
         return new Spark(p5, x, y, size, colour);
     }
 
