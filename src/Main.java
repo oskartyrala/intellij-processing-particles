@@ -17,9 +17,7 @@ public class Main extends PApplet {
         int[] palette = createPalette();
         sparks = Spark.createSparks(this, 100, palette);
         background(Utils.pickFromArray(palette));
-        if (frameCount < 60){
-            showBigMessage("Press escape to exit");
-        }
+        showBigMessage("Press escape to exit");
     }
 
     @Override
