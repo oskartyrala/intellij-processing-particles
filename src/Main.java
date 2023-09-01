@@ -16,12 +16,12 @@ public class Main extends PApplet {
     public void setup() {
         int[] palette = createPalette();
         sparks = Spark.createSparks(this, 100, palette);
-        background(Utils.pickFromArray(palette));
-        showBigMessage("Press escape to exit");
     }
 
     @Override
     public void draw() {
+        background(90);
+        showBigMessage("Press escape to exit");
         //background(100);
         for (Spark s : sparks){
             s.display();
