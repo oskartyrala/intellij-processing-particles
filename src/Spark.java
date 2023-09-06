@@ -47,7 +47,7 @@ public class Spark {
     public void update() {
         pos.add(vel);
         final float angleChange = p5.random(-0.2f, 0.2f);
-        vel.rotate(angleChange);
+        vel.rotate(angleChange); //steer left or right.
         size = PApplet.constrain(size + p5.random(-1, 1), 5, 100);
     }
 
@@ -55,7 +55,7 @@ public class Spark {
     //Static methods - these don't operate on a specific existing instance of the class,
     //but are still related to the class.
     public static Spark[] createSparks(PApplet p5, int numToCreate, int[] palette) {
-        Spark[] sparks = new Spark[numToCreate];
+        Spark[] sparks = new Spark[numToCreate];//a fixed size array
         for (int i = 0; i < numToCreate; i++) {
             sparks[i] = createRandomSpark(p5, palette);
         }
@@ -66,7 +66,7 @@ public class Spark {
         float x = p5.random(0f, p5.width);
         float y = p5.random(0f, p5.height);
         float size = p5.random(10, 50);
-;
+
         int colour = Utils.pickFromArray(palette);
         return new Spark(p5, x, y, size, colour);
     }

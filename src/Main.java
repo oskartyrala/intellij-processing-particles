@@ -1,20 +1,25 @@
 import processing.core.PApplet;
 
 public class Main extends PApplet {
-    Spark[] sparks;
-    public static void main(String[] args) {
-        PApplet.main(new String[]{"Main"});
 
+    //The data stored in an instance of this Main class.
+    private Spark[] sparks;
+
+    public static void main(String[] args) {
+        //You don't need to know what this does
+        PApplet.main(new String[]{"Main"});
     }
+
     @Override
     public void settings() {
         size(800, 600);
-        fullScreen();
+        //fullScreen();
     }
 
     @Override
     public void setup() {
         int[] palette = createPalette();
+        //Call the createSparks method, passing a reference to this PApplet (for all the Processing functions like circle)
         sparks = Spark.createSparks(this, 100, palette);
         background(Utils.pickFromArray(palette));
         showBigMessage("Press escape to exit");
