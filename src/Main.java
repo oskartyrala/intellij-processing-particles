@@ -21,7 +21,7 @@ public class Main extends PApplet {
         int[] palette = createPalette();
         //Call the createSparks method, passing a reference to this PApplet (for all the Processing functions like circle)
         sparks = Spark.createSparks(this, 100, palette);
-        background(Utils.pickFromArray(palette));
+        background(Utils.pickFromArrayOfInts(palette));
         showBigMessage("Press escape to exit");
     }
 
